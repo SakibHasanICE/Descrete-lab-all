@@ -2,15 +2,15 @@
 # find the ordered pairs are in the relation 𝐑
 # 𝐑𝟏 = {(𝐚, 𝐛) | 𝐚 𝐝𝐢𝐯𝐢𝐝𝐞𝐬 𝐛} 𝐑𝟐 = {(𝐚,𝐛) | 𝐚 ≤ 𝐛}
 
-from itertools import product 
-with open("/content/sample_data/input.txt", "r", encoding="utf-8") as g:
-     S = list(map(int, g.readlines()))
-      print("S= "+str(S)) 
-      res=[(i,j) for i,j in product(S,repeat=2) if i%j==0 or j%i==0] 
-      res2=[(i,j) for i,j in product(S,repeat=2) if i<=j] 
-      # printing result
-    print ("The pair list is for a/b : " + str(res)) 
-    print ("The pair list is for a<=b : " + str(res2))
+from itertools import product
+with open("input.txt", "r", encoding="utf-8") as g:
+    S = list(map(int, g.readlines()))
+    print("S= "+str(S))
+    res=[(i,j) for i,j in product(S,repeat=2) if i%j==0 or j%i==0]
+    res2=[(i,j) for i,j in product(S,repeat=2) if i<=j]
+    # printing result
+print ("The pair list is for a/b : " + str(res))
+print ("The pair list is for a<=b : " + str(res2))
 
 ############# 2nd #############
 #(a, b) if 𝐚 ∈ 𝐀 , 𝐛 ∈ 𝐁 and 𝐚 > 𝐛.
